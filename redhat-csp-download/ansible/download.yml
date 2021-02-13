@@ -6,7 +6,7 @@
 
   tasks:
     - name: Download product zips
-      no_log: true
+      #no_log: True
       redhat_csp_download:
         url: "{{ item.url }}"
         dest: "{{ item.file }}"

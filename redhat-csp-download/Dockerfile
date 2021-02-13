@@ -12,7 +12,8 @@ LABEL "com.github.actions.branding.color"="purple"
 COPY ansible /ansible
 RUN microdnf install --assumeyes --nodocs python3 && \
     microdnf clean all && \
-    python3 --version
+    python3 --version && \
+    python3 -m pip install -U pip
 
 RUN pip3 install -r /ansible/requirements.txt && \
     ansible --version && \
