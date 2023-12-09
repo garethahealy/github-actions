@@ -16,7 +16,7 @@
       "matchUpdateTypes": [
         "pinDigest"
       ],
-      "pinDigests": false,
+      "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}",
       "enabled": false
     },
     {
