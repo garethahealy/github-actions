@@ -16,6 +16,7 @@
       "matchUpdateTypes": [
         "pinDigest"
       ],
+      "pinDigests": false,
       "enabled": false
     },
     {
