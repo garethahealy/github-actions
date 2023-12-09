@@ -13,11 +13,7 @@
       "matchPackageNames": [
         "quay.io/skopeo/stable"
       ],
-      "matchUpdateTypes": [
-        "pinDigest"
-      ],
-      "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}",
-      "enabled": false
+      "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}"
     },
     {
       "matchDepTypes": [
