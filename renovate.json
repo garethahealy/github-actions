@@ -21,6 +21,15 @@
   "packageRules": [
     {
       "matchDepTypes": [
+        "dockerfile"
+      ],
+      "matchPackageNames": [
+        "quay.io/skopeo/stable"
+      ],
+      "enabled": false
+    },
+    {
+      "matchDepTypes": [
         "action"
       ],
       "matchPackageNames": [
