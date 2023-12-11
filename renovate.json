@@ -20,13 +20,13 @@
   ],
   "packageRules": [
     {
-      "matchDepTypes": [
-        "dockerfile"
+      "matchDatasources": [
+        "docker"
       ],
       "matchPackageNames": [
         "quay.io/skopeo/stable"
       ],
-      "enabled": false
+      "pinDigests": false
     },
     {
       "matchDepTypes": [
