@@ -5,16 +5,20 @@
     "regexManagers:dockerfileVersions",
     "schedule:earlyMondays"
   ],
-  "packageRules": [
+  "customManagers": [
     {
-      "matchDatasources": [
-        "docker"
+      "customType": "regex",
+      "datasourceTemplate": "docker",
+      "fileMatch": [
+        "^disconnected-csv/Dockerfile$"
       ],
-      "matchPackageNames": [
-        "quay.io/skopeo/stable"
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>[^\\s]+?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))?(?: versioning=(?<versioning>[^\\s]+?))?(?: extractVersion=(?<extractVersion>[^\\s]+?))?\\s+[A-Za-z0-9]+?\\s*:\\s*[\"']?(?<currentValue>.+?)[\"']?\\s"
       ],
       "autoReplaceStringTemplate": "{{depName}}{{#if newValue}}:{{newValue}}{{/if}}"
-    },
+    }
+  ],
+  "packageRules": [
     {
       "matchDepTypes": [
         "action"
